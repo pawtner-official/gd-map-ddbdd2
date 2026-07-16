@@ -255,6 +255,22 @@ body {
 .ft { background: var(--ink); padding: 20px 52px; display: flex; justify-content: space-between; align-items: center; }
 .ft-b { font-family: 'Noto Serif JP', serif; font-size: 14px; font-weight: 700; color: var(--paper); }
 .ft-d { font-size: 10px; letter-spacing: 0.16em; color: rgba(246,244,239,0.35); }
+
+/* MOBILE */
+@media (max-width: 640px) {
+  body { padding: 18px 10px 36px; }
+  .hd { padding: 32px 22px 28px; }
+  .hd::after { font-size: 200px; top: -40px; right: 12px; }
+  .hd-title { font-size: 28px; }
+  .hd-sub { font-size: 13px; }
+  .sec { padding: 28px 22px; }
+  .field { flex-direction: column; }
+  .supplier { width: 100%; }
+  .axes, .roles, .success { grid-template-columns: 1fr; }
+  .spread { padding: 32px 22px; }
+  .spread-hd { font-size: 21px; }
+  .ft { padding: 18px 22px; flex-direction: column; align-items: flex-start; gap: 6px; }
+}
 </style>
 </head>
 <body>
