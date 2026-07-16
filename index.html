@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gダイニングビル 立て直しプロジェクト — 構想マップ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+
+
+
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:    #1A1F2B;
+  --teal:   #0E6E6E;
+  --teal-d: #0A5252;
+  --amber:  #D98A2B;
+  --paper:  #F6F4EF;
+  --line:   #DDD8CE;
+  --mid:    #6E6A60;
+  --soft:   #ECE8E0;
+  --blueA:  #2C5A7A;
+  --greenB: #2E6E4E;
+}
+
+body {
+  background: #10141C;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 36px 18px 56px;
+  color: var(--ink);
+}
+
+.page {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: var(--paper);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+}
+
+/* HEADER */
+.hd {
+  background: var(--ink);
+  padding: 46px 52px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.hd::after {
+  content: 'G';
+  position: absolute;
+  right: 24px;
+  top: -66px;
+  font-size: 300px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  color: rgba(255,255,255,0.035);
+  line-height: 1;
+}
+.hd-eye {
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  color: var(--amber);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.hd-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--paper);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.hd-sub {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: rgba(246,244,239,0.6);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* SECTION */
+.sec { padding: 40px 52px; border-bottom: 1px solid var(--line); }
+.sec:last-child { border-bottom: none; }
+.sec-hd { display: flex; align-items: center; gap: 13px; margin-bottom: 26px; }
+.sec-num {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--teal); color: var(--paper);
+  font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 13px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.sec-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; letter-spacing: 0.03em; }
+.sec-note { font-size: 12px; color: var(--mid); margin-top: 3px; letter-spacing: 0.02em; }
+
+/* 1. FIELD MAP */
+.field { display: flex; gap: 18px; align-items: stretch; }
+.gbuild {
+  flex: 1;
+  border: 2px solid var(--teal);
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+  position: relative;
+}
+.gbuild-tag {
+  position: absolute; top: -11px; left: 16px;
+  background: var(--teal); color: white;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+  padding: 3px 12px; border-radius: 3px;
+}
+.stores { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 8px; }
+.store {
+  background: var(--soft);
+  border-radius: 6px;
+  padding: 13px 12px;
+}
+.store.hero { background: var(--ink); }
+.store.hero .store-nm { color: var(--amber); }
+.store.hero .store-dc { color: rgba(246,244,239,0.65); }
+.store.crit { border: 1.5px solid var(--amber); background: #FBF4E9; }
+.store-nm { font-family: 'Noto Serif JP', serif; font-size: 14px; font-weight: 700; margin-bottom: 6px; line-height: 1.3; }
+.store-dc { font-size: 10.5px; color: var(--mid); line-height: 1.55; }
+.link-note {
+  margin-top: 12px; font-size: 11px; color: var(--teal-d);
+  background: #E8F1F1; padding: 9px 12px; border-radius: 5px; line-height: 1.6;
+}
+.supplier {
+  width: 168px; flex-shrink: 0;
+  border: 2px dashed var(--greenB); border-radius: 8px;
+  padding: 16px; background: white; position: relative;
+  display: flex; flex-direction: column;
+}
+.supplier-tag {
+  position: absolute; top: -11px; left: 16px;
+  background: var(--greenB); color: white;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  padding: 3px 12px; border-radius: 3px;
+}
+.supplier .store-nm { color: var(--greenB); margin-top: 6px; }
+.flow-arrow {
+  text-align: center; color: var(--greenB); font-size: 11px;
+  margin-top: auto; padding-top: 12px; font-weight: 500; line-height: 1.6;
+}
+
+/* 2. TWO AXES */
+.axes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.axis { border-radius: 8px; padding: 22px 20px; color: white; }
+.axis.a { background: var(--blueA); }
+.axis.b { background: var(--greenB); }
+.axis-lbl { font-size: 10px; letter-spacing: 0.2em; opacity: 0.7; margin-bottom: 8px; }
+.axis-ttl { font-family: 'Noto Serif JP', serif; font-size: 19px; font-weight: 700; margin-bottom: 4px; }
+.axis-flow { font-size: 11px; opacity: 0.75; margin-bottom: 14px; letter-spacing: 0.04em; }
+.axis-body { font-size: 12px; line-height: 1.85; opacity: 0.92; }
+.axis-owner {
+  margin-top: 14px; padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  font-size: 11.5px; line-height: 1.6;
+}
+.axis-owner strong { color: #FFE0AE; }
+.sync-band {
+  margin-top: 16px; text-align: center;
+  font-size: 12px; color: var(--mid);
+  background: var(--soft); padding: 11px; border-radius: 6px; line-height: 1.6;
+}
+.sync-band strong { color: var(--ink); }
+
+/* 3. B FLOW */
+.bflow { display: flex; flex-direction: column; gap: 0; }
+.bstep { display: flex; gap: 16px; align-items: flex-start; position: relative; padding-bottom: 18px; }
+.bstep:last-child { padding-bottom: 0; }
+.bstep::before {
+  content: ''; position: absolute; left: 15px; top: 32px; bottom: -2px;
+  width: 2px; background: var(--line);
+}
+.bstep:last-child::before { display: none; }
+.bstep-n {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: var(--greenB); color: white;
+  font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 14px;
+  display: flex; align-items: center; justify-content: center; z-index: 1;
+}
+.bstep-body { padding-top: 3px; flex: 1; }
+.bstep-ttl { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.bstep-dc { font-size: 12px; color: var(--mid); line-height: 1.75; }
+.who {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  padding: 2px 9px; border-radius: 20px; margin-left: 8px; vertical-align: middle;
+}
+.who.m { background: #E4EDF4; color: var(--blueA); }
+.who.c { background: #FBF0E2; color: var(--amber); }
+.who.mc { background: #E7F1EA; color: var(--greenB); }
+
+/* 4. ROLES */
+.roles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.role { border-radius: 8px; padding: 20px; border: 1px solid var(--line); background: white; }
+.role-nm { font-family: 'Noto Serif JP', serif; font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+.role.m .role-nm { color: var(--blueA); }
+.role.c .role-nm { color: var(--amber); }
+.role-body { font-size: 12px; line-height: 1.9; color: var(--ink); }
+.role-body .tight { color: var(--mid); font-size: 11px; margin-top: 8px; display: block; line-height: 1.6; }
+
+/* 5. SUCCESS */
+.success { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.succ { background: var(--ink); border-radius: 8px; padding: 22px 20px; color: white; }
+.succ-lbl { font-size: 10px; letter-spacing: 0.2em; color: var(--amber); margin-bottom: 10px; }
+.succ-hd { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 700; color: var(--paper); margin-bottom: 8px; }
+.succ-dc { font-size: 11.5px; line-height: 1.8; color: rgba(246,244,239,0.7); }
+.pending {
+  margin-top: 16px; background: #FBF4E9; border-left: 3px solid var(--amber);
+  padding: 13px 16px; border-radius: 4px;
+}
+.pending-t { font-size: 11px; font-weight: 700; color: var(--amber); letter-spacing: 0.06em; margin-bottom: 6px; }
+.pending-l { font-size: 11.5px; color: var(--ink); line-height: 1.85; }
+
+/* SPREAD / 伝染 */
+.spread {
+  background: linear-gradient(135deg, #0E6E6E 0%, #0A5252 100%);
+  padding: 40px 52px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.spread::after {
+  content: '';
+  position: absolute; right: -40px; bottom: -60px;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: rgba(217,138,43,0.12);
+}
+.spread-eye { font-size: 10px; letter-spacing: 0.28em; color: #F0C48A; margin-bottom: 14px; }
+.spread-hd {
+  font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 900;
+  color: white; line-height: 1.4; margin-bottom: 16px; position: relative; z-index: 1;
+}
+.spread-body { font-size: 12.5px; line-height: 2; color: rgba(255,255,255,0.82); max-width: 620px; position: relative; z-index: 1; }
+.spread-chain {
+  display: flex; align-items: center; gap: 8px; margin-top: 24px; flex-wrap: wrap; position: relative; z-index: 1;
+}
+.chain-node {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 22px; padding: 7px 16px; font-size: 12px; font-weight: 500;
+}
+.chain-node.seed { background: var(--amber); border-color: var(--amber); color: var(--ink); font-weight: 700; }
+.chain-node.grow { background: rgba(255,255,255,0.16); }
+.chain-arw { color: #F0C48A; font-size: 13px; }
+
+/* FOOTER */
+.ft { background: var(--ink); padding: 20px 52px; display: flex; justify-content: space-between; align-items: center; }
+.ft-b { font-family: 'Noto Serif JP', serif; font-size: 14px; font-weight: 700; color: var(--paper); }
+.ft-d { font-size: 10px; letter-spacing: 0.16em; color: rgba(246,244,239,0.35); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div class="hd-eye">PROJECT MAP — Gダイニングビル 立て直し構想</div>
+    <div class="hd-title">底から、流れをつくる。</div>
+    <div class="hd-sub">集客の導線も、来店の体験も、今はまだ何もできていない。だからこそ、両方を同時に組み立てれば、流れは生まれる。二人の力を出し合ってやる、2〜3ヶ月のプロジェクト。</div>
+  </div>
+
+  <!-- 1. FIELD -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-num">1</div>
+      <div>
+        <div class="sec-title">戦場 — どこに、どう入り込むか</div>
+        <div class="sec-note">横連携ゼロだった店舗間に、人の流れをつくる</div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="gbuild">
+        <div class="gbuild-tag">G ダイニングビル 2F（同一会社）</div>
+        <div class="stores">
+          <div class="store hero">
+            <div class="store-nm">丸海屋<br>南三条店</div>
+            <div class="store-dc">集客のメイン。ここを起点に全設計を始める</div>
+          </div>
+          <div class="store">
+            <div class="store-nm">炭焼きバル<br>倉庫</div>
+            <div class="store-dc">丸海屋と厨房共有・2店舗1業態。同じ問題を共有</div>
+          </div>
+          <div class="store crit">
+            <div class="store-nm">カシンフウ</div>
+            <div class="store-dc">教育が最も深刻。早急な立て直しが必要</div>
+          </div>
+        </div>
+        <div class="link-note">
+          <strong>狙い：</strong>スタッフの行き来を可能にし、人材を流動化。横連携で相乗効果を生む。
+        </div>
+      </div>
+      <div class="supplier">
+        <div class="supplier-tag">供給源</div>
+        <div class="store-nm">ぶあいそ<br>南三条店</div>
+        <div class="store-dc">店長が優秀・スタッフが育っている。夏の閑散期はスポット協力を得やすい</div>
+        <div class="flow-arrow">育った人材・空気を<br>Gビル側へ →</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. TWO AXES -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-num">2</div>
+      <div>
+        <div class="sec-title">二軸同時進行 — バイパス手術の発想</div>
+        <div class="sec-note">扱う打ち手も人も別だから、上半身と下半身を同時に動かせる</div>
+      </div>
+    </div>
+    <div class="axes">
+      <div class="axis a">
+        <div class="axis-lbl">軸 A</div>
+        <div class="axis-ttl">集客導線</div>
+        <div class="axis-flow">外 ─→ 店に入れるまで</div>
+        <div class="axis-body">目標数値（月間人数×客単価）から逆算。ブランドのピラミッドを組み、媒体・LINE・GBPを整合させる。施策は足りなければ10でも15でも出し、優先度順に実行して観察・改善を回す。</div>
+        <div class="axis-owner"><strong>村田：</strong>作戦づくりは得意分野・通常運転。<strong>千鶴：</strong>Webも触れるので、実行を一緒に。</div>
+      </div>
+      <div class="axis b">
+        <div class="axis-lbl">軸 B ★ 二人の主戦場</div>
+        <div class="axis-ttl">体験導線</div>
+        <div class="axis-flow">入店 ─→ 退店 ─→ 再来店</div>
+        <div class="axis-body">入ってきた水を受ける「バケツ」。ここが無いと集客しても漏れる（北口の教訓）。ノイズを除去し、入店から退店までの感情を設計。オペを組み、スタッフを育て、自走する流れをつくる。</div>
+        <div class="axis-owner"><strong>村田×千鶴：</strong>一人ではつらい。ノイズ除去から型づくりまで、ここを一緒にやりたい。</div>
+      </div>
+    </div>
+    <div class="sync-band">
+      どちらも即効の打ち手はなく、金も使えない。<strong>両輪がじわじわ、同じペースで上がっていく。</strong>Bで穴を塞ぎながら、Aで水を入れる。だから漏れない。
+    </div>
+  </div>
+
+  <!-- 3. B FLOW -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-num">3</div>
+      <div>
+        <div class="sec-title">軸B 体験導線 — 立て直しの5ステップ</div>
+        <div class="sec-note">丸海屋南三条を起点に、倉庫へ横展開</div>
+      </div>
+    </div>
+    <div class="bflow">
+      <div class="bstep">
+        <div class="bstep-n">1</div>
+        <div class="bstep-body">
+          <div class="bstep-ttl">ノイズを洗い出す<span class="who mc">村田×千鶴</span></div>
+          <div class="bstep-dc">今は雑音だらけで、きれいな音が流れていない状態。最大のノイズは「ファーストコンタクトの不在」— QRを渡して終わり、何の説明もない。二人の目で可視化する。</div>
+        </div>
+      </div>
+      <div class="bstep">
+        <div class="bstep-n">2</div>
+        <div class="bstep-body">
+          <div class="bstep-ttl">カスタマージャーニーマップを作る<span class="who mc">村田×千鶴</span></div>
+          <div class="bstep-dc">入店から退店まで、どのタイミングで何をやるかを一枚に。「これがノイズ、これもノイズ」と印をつけていく。マップ自体が進捗の測定ツールになる。</div>
+        </div>
+      </div>
+      <div class="bstep">
+        <div class="bstep-n">3</div>
+        <div class="bstep-body">
+          <div class="bstep-ttl">トークスクリプト化<span class="who mc">村田×千鶴</span></div>
+          <div class="bstep-dc">各タイミングの声かけを型に落とす。店長は接客に出さず「ドリンク製造」に専念。接客はバイトに任せ、困ったら店長を召喚する配置に。</div>
+        </div>
+      </div>
+      <div class="bstep">
+        <div class="bstep-n">4</div>
+        <div class="bstep-body">
+          <div class="bstep-ttl">千鶴さんが実演して精度を上げる<span class="who c">千鶴</span></div>
+          <div class="bstep-dc">「これでやってね」では動かない。現場で実際にやってみせて、型を磨く。<strong>限られた時間は、この“型を作る”一点に集中。</strong>前後の作り込みは村田が巻き取る。</div>
+        </div>
+      </div>
+      <div class="bstep">
+        <div class="bstep-n">5</div>
+        <div class="bstep-body">
+          <div class="bstep-ttl">スタッフへ展開<span class="who mc">村田×千鶴</span></div>
+          <div class="bstep-dc">磨いた型を配る。ぶあいその積極的でいい子を触媒に入れ、まだ染まっていない子を良い色に染めていく。人を入れ替えるのではなく、空気を伝播させる。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. ROLES -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-num">4</div>
+      <div>
+        <div class="sec-title">役割分担 — 二人の力を出し合う</div>
+        <div class="sec-note">それぞれが一番得意なところだけをやる</div>
+      </div>
+    </div>
+    <div class="roles">
+      <div class="role m">
+        <div class="role-nm">村田 — 作戦担当（監督兼プロデューサー）</div>
+        <div class="role-body">
+          作戦をA・B両方つくる。現場には立たない。全体の構成から戦術、マップ・スクリプトまで設計しきる。
+          <span class="tight">＝ 絵を描き、戦術を組み、優先度順に実行して改善を回す</span>
+        </div>
+      </div>
+      <div class="role c">
+        <div class="role-nm">千鶴 — 実行担当（両軸で動く）</div>
+        <div class="role-body">
+          Web（集客）も現場も、両方で動ける。戦略を意図通りに表現でき、周りを巻き込むエネルギーを持つ。
+          <span class="tight">＝ 集客の手も、現場の型づくりも。限られた時間は一番効くところに集中</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. SUCCESS -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-num">5</div>
+      <div>
+        <div class="sec-title">成功の定義 — 何がどうなれば勝ちか</div>
+        <div class="sec-note">2〜3ヶ月かけて、じわじわ、でも確実に</div>
+      </div>
+    </div>
+    <div class="success">
+      <div class="succ">
+        <div class="succ-lbl">定量</div>
+        <div class="succ-hd">客数が増える</div>
+        <div class="succ-dc">最終成果。集客導線が機能し、体験導線が受け止めることで、新規が常連へと変わっていく。</div>
+      </div>
+      <div class="succ">
+        <div class="succ-lbl">定性</div>
+        <div class="succ-hd">ノイズが消え、自走する</div>
+        <div class="succ-dc">潰したノイズの数が、そのまま進捗になる。最終的に、二人が入らなくても現場が勝手に回る状態へ。</div>
+      </div>
+    </div>
+    <div class="pending">
+      <div class="pending-t">これから一緒に詰める余白</div>
+      <div class="pending-l">目標数値（月間人数×客単価）／予算枠（基本は無予算前提）／期間内マイルストーン</div>
+    </div>
+  </div>
+
+  <!-- SPREAD / 裏テーマ -->
+  <div class="spread">
+    <div class="spread-eye">もう一つの目的 — 前向きなオーラを伝染させる</div>
+    <div class="spread-hd">すすきのの空気を、少しずつ変えていく。</div>
+    <div class="spread-body">
+      今のすすきの地区は、どんよりと空気が重い。その中で頑張っている新入社員の堂珍さんに、「お客様のために頑張りたい」という気持ちを失わずにいてほしい。前向きに取り組む私たちが入ることで、腐らずに前を向ける人を増やしたい。それは堂珍さんの未来にもつながるし、幸せになる人は彼女だけじゃない。最初は二人だけかもしれない。でもそこから伝染させていく。
+    </div>
+    <div class="spread-chain">
+      <span class="chain-node seed">村田 × 千鶴</span>
+      <span class="chain-arw">→</span>
+      <span class="chain-node grow">堂珍さん</span>
+      <span class="chain-arw">→</span>
+      <span class="chain-node">他のスタッフ</span>
+      <span class="chain-arw">→</span>
+      <span class="chain-node">現場全体の空気</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ft">
+    <div class="ft-b">Gダイニングビル 立て直しプロジェクト</div>
+    <div class="ft-d">構想マップ — 2026.07</div>
+  </div>
+
+</div>
+</body>
+</html>
